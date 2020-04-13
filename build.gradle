@@ -1,0 +1,22 @@
+
+apply plugin: 'war'
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    
+    compile group: 'javax.servlet.jsp.jstl', name: 'jstl', version: '1.2'
+    compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.11'
+    compile group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '2.7.6'
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.7.19'
+}
